@@ -30,7 +30,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-
+        /* Not implemented; intended to prevent exiting app while in the splash screen. */
     }
 
 }
