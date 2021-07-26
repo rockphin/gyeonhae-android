@@ -60,7 +60,7 @@ jobs:
           api-level: 23
           script: ./gradlew connectedAndroidTest
 
-  instrumented-test-api-30:
+  instrumented-test-api-29:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -68,7 +68,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Android Emulator Runner (API 30)
+      - name: Android Emulator Runner (API 29)
         uses: ReactiveCircus/android-emulator-runner@v2.17.0
         with:
           api-level: 30
