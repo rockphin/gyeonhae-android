@@ -2,12 +2,12 @@ package us.gijuno.gyeonhae
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.postDelayed
 
 class SplashActivity : AppCompatActivity() {
@@ -19,7 +19,10 @@ class SplashActivity : AppCompatActivity() {
             window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
             @Suppress("deprecation") // not deprecated in Q or below
-            window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
         }
 
         val hd = Handler(Looper.getMainLooper())
@@ -32,5 +35,4 @@ class SplashActivity : AppCompatActivity() {
     override fun onBackPressed() {
         /* Not implemented; intended to prevent exiting app while in the splash screen. */
     }
-
 }
