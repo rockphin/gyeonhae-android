@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.core.os.postDelayed
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +23,10 @@ class SplashActivity : AppCompatActivity() {
         }
 
         val hd = Handler(Looper.getMainLooper())
-        hd.postDelayed({
+        hd.postDelayed(1500) {
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             this@SplashActivity.finish()
-        }, 1500)
-
+        }
     }
 
     override fun onBackPressed() {
