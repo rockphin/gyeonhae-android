@@ -1,4 +1,4 @@
-package us.gijuno.gyeonhae
+package us.gijuno.gyeonhae.presentation
 
 import android.content.Intent
 import android.os.Build
@@ -9,6 +9,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.postDelayed
+import us.gijuno.gyeonhae.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
