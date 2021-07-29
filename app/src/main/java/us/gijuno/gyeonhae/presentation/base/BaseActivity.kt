@@ -5,10 +5,9 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity<T : ViewBinding, R : ViewModel>(
+abstract class BaseActivity<T : ViewBinding>(
     @LayoutRes val layoutId: Int,
 ) : AppCompatActivity() {
 
@@ -16,8 +15,6 @@ abstract class BaseActivity<T : ViewBinding, R : ViewModel>(
     protected val binding: T = with(_binding) {
         this ?: throw IllegalStateException("Binding not initialized")
     }
-
-    protected abstract val viewModel: R
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
