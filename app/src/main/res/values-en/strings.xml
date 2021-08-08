@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GyeonHae</string>
+    <string name="description_logo">logo</string>
+    <string name="main_subtitle">Hello</string>
+    <string name="main_title">Select what you want</string>
+</resources>
