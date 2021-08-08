@@ -4,4 +4,5 @@
     <string name="description_logo">logo</string>
     <string name="main_subtitle">Hello</string>
     <string name="main_title">Select what you want</string>
+    <string name="app_logo">app logo</string>
 </resources>

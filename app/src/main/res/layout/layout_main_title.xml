@@ -34,6 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/splash_logo"
         android:layout_width="45dp"
-        android:layout_height="45dp"/>
+        android:layout_height="45dp"
+        android:contentDescription="@string/app_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
