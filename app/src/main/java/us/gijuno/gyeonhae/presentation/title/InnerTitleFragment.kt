@@ -9,7 +9,8 @@ import us.gijuno.gyeonhae.R
 
 class InnerTitleFragment : Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater, 
+        container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
 
