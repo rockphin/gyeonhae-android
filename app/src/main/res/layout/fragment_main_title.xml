@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginEnd="30dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:textColor="@color/text_black"
-        android:id="@+id/subtitle_textview"
-        android:textSize="14sp"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/main_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <data>
 
-    <TextView
-        android:textColor="@color/text_black"
-        android:text="@string/main_title"
-        android:textSize="18sp"
-        android:fontFamily="@font/noto_sans_kr_bold"
-        android:id="@+id/title_textview"
-        app:layout_constraintTop_toBottomOf="@id/subtitle_textview"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    </data>
 
-    <ImageView
-        app:layout_constraintBottom_toBottomOf="@id/title_textview"
-        app:layout_constraintTop_toTopOf="@id/subtitle_textview"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/splash_logo"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:contentDescription="@string/app_logo" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/subtitle_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:text="@string/main_subtitle"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:text="@string/main_title"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_textview" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/splash_logo"
+            app:layout_constraintBottom_toBottomOf="@id/title_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/subtitle_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
