@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import us.gijuno.gyeonhae.R
 import us.gijuno.gyeonhae.databinding.FragmentMainTitleBinding
 import us.gijuno.gyeonhae.presentation.base.BaseFragment
