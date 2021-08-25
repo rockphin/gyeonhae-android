@@ -8,10 +8,9 @@ import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment<T : ViewBinding, R : ViewModel>(
+abstract class BaseFragment<T : ViewBinding>(
     @LayoutRes val layoutId: Int,
 ) : Fragment() {
 
@@ -20,8 +19,6 @@ abstract class BaseFragment<T : ViewBinding, R : ViewModel>(
         get() = with(_binding) {
             this ?: throw IllegalStateException("Binding not initialized")
         }
-
-    protected abstract val viewModel: R
 
     override fun onCreateView(
         inflater: LayoutInflater,
