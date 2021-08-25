@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import us.gijuno.gyeonhae.R
+import us.gijuno.gyeonhae.databinding.FragmentMainTitleBinding
+import us.gijuno.gyeonhae.presentation.base.BaseFragment
 
-class MainTitleFragment : Fragment() {
+class MainTitleFragment : BaseFragment<FragmentMainTitleBinding>(R.layout.fragment_main_title) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
 
-        return inflater.inflate(R.layout.fragment_main_title, container, false)
+        return binding.root
     }
 }

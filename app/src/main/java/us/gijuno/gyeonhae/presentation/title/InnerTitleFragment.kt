@@ -6,14 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import us.gijuno.gyeonhae.R
+import us.gijuno.gyeonhae.databinding.FragmentInnerTitleBinding
+import us.gijuno.gyeonhae.presentation.base.BaseFragment
 
-class InnerTitleFragment : Fragment() {
+class InnerTitleFragment : BaseFragment<FragmentInnerTitleBinding>(R.layout.fragment_inner_title) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
 
-        return inflater.inflate(R.layout.fragment_inner_title, container, false)
+        return binding.root
     }
 }
