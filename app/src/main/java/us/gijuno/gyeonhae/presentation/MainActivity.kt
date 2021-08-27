@@ -1,6 +1,8 @@
 package us.gijuno.gyeonhae.presentation
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonItemsList = listOf(
-            LayoutMenuButton(R.drawable.ic_scan, getString(R.string.scan_func)),
-            LayoutMenuButton(R.drawable.ic_convenience, getString(R.string.convenience_func)),
-            LayoutMenuButton(R.drawable.ic_setting, getString(R.string.setting)),
-            LayoutMenuButton(R.drawable.ic_guide, getString(R.string.app_guide)),
+            LayoutMenuButton(R.drawable.ic_scan, R.string.scan_func),
+            LayoutMenuButton(R.drawable.ic_convenience, R.string.convenience_func),
+            LayoutMenuButton(R.drawable.ic_setting, R.string.setting),
+            LayoutMenuButton(R.drawable.ic_guide, R.string.app_guide),
         )
 
         Slush.SingleType<LayoutMenuButton>()
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             .setLayoutManager(gridLayoutManager)
             .onBind { view, item ->
                 val textViewWithDrawable = view.findViewById<TextView>(R.id.textview_with_drawable)
-                textViewWithDrawable.text = item.text
+                textViewWithDrawable.text = getString(item.text)
                 val compoundDrawables = item.icon
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
