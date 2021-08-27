@@ -28,11 +28,7 @@ class MainActivity : AppCompatActivity() {
                 val textViewWithDrawable = view.findViewById<TextView>(R.id.textview_with_drawable)
                 textViewWithDrawable.text = item.text
                 val compoundDrawables = item.icon
-                textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                    0,
-                    compoundDrawables,
-                    0,
-                    0)
+                textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .setItems(buttonItemsList)
             .into(findViewById(R.id.button_recyclerview))
