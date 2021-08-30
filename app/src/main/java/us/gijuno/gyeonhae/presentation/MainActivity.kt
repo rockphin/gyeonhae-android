@@ -35,6 +35,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, InnerActivity::class.java).putExtra("index", InnerActivitySelector(index)))
             }
             .setItems(buttonItemsList)
-            .into(findViewById(R.id.button_recyclerview))
+            .into(findViewById(R.id.main_button_recyclerview))
     }
 }
