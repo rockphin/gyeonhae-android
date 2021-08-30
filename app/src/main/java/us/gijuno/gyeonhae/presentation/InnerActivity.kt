@@ -1,13 +1,10 @@
 package us.gijuno.gyeonhae.presentation
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
-import org.w3c.dom.Text
 import slush.Slush
 import us.gijuno.gyeonhae.R
 
@@ -23,7 +20,7 @@ class InnerActivity : AppCompatActivity() {
         val innerTitle = findViewById<TextView>(R.id.inner_title)
         val innerSubTitle = findViewById<TextView>(R.id.inner_subtitle)
 
-        when(activityStatus) {
+        when (activityStatus) {
             "recognize" -> {
                 innerTitle.text = "인식 기능"
                 innerSubTitle.text = "원하시는 인식 기능을 선택해주세요."

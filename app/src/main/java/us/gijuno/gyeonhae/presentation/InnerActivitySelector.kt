@@ -2,7 +2,7 @@ package us.gijuno.gyeonhae.presentation
 
 private var result: String = ""
 fun InnerActivitySelector(index: Int): String {
-    when(index) {
+    when (index) {
         0 -> result = "recognize"
         1 -> result = "convenience"
         2 -> result = "setting"
