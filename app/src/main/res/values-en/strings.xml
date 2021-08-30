@@ -9,4 +9,16 @@
     <string name="convenience_func">Convenience</string>
     <string name="setting">Setting</string>
     <string name="app_guide">Guide</string>
+    <string name="braille_scan">Braille Scan</string>
+    <string name="text_scan">Text Scan</string>
+    <string name="picture_scan">Picture Scan</string>
+    <string name="barcode_scan">Barcode Scan</string>
+    <string name="tip_off">Tip Off</string>
+    <string name="sos">SOS</string>
+    <string name="vibrate_on">Vibrate on</string>
+    <string name="vibrate_off">Vibrate off</string>
+    <string name="sound_on">Sound on</string>
+    <string name="sound_off">Sound off</string>
+    <string name="auto_scan_on">Auto-scan on</string>
+    <string name="auto_scan_off">Auto-scan off</string>
 </resources>
