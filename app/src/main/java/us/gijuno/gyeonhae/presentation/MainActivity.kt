@@ -1,5 +1,6 @@
 package us.gijuno.gyeonhae.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
                 textViewWithDrawable.text = getString(item.text)
                 val compoundDrawables = item.icon
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
+            }
+            .onItemClick { _, index ->
+                startActivity(Intent(this, InnerActivity::class.java).putExtra("index", InnerActivitySelector(index)))
             }
             .setItems(buttonItemsList)
             .into(findViewById(R.id.button_recyclerview))
