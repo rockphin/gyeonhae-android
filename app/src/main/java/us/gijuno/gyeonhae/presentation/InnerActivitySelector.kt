@@ -8,5 +8,6 @@ fun InnerActivitySelector(index: Int): String {
         2 -> result = "setting"
         3 -> result = "guide"
     }
+
     return result
 }
