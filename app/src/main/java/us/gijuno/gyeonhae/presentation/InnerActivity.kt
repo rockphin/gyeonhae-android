@@ -1,8 +1,8 @@
 package us.gijuno.gyeonhae.presentation
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import slush.Slush
@@ -40,8 +40,7 @@ class InnerActivity : AppCompatActivity() {
                 innerSubTitle.isVisible = false
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_auto_scan,
-                    R.string.auto_scan_off))
+                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_auto_scan, R.string.auto_scan_off))
             }
         }
 
@@ -52,10 +51,7 @@ class InnerActivity : AppCompatActivity() {
                 val textViewWithDrawable = view.findViewById<TextView>(R.id.textview_with_drawable)
                 textViewWithDrawable.text = getString(item.text)
                 val compoundDrawables = item.icon
-                textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0,
-                    compoundDrawables,
-                    0,
-                    0)
+                textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .setItems(buttonItemsList)
             .into(findViewById(R.id.inner_button_recyclerview))
