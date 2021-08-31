@@ -6,7 +6,9 @@
     <string name="main_title">Select what you want</string>
     <string name="app_logo">app logo</string>
     <string name="scan_func">Scan</string>
+    <string name="select_scan_func">Select the scan function you want.</string>
     <string name="convenience_func">Convenience</string>
+    <string name="select_convenience_func">Select the convenience function you want.</string>
     <string name="setting">Setting</string>
     <string name="app_guide">Guide</string>
     <string name="braille_scan">Braille Scan</string>

@@ -22,21 +22,21 @@ class InnerActivity : AppCompatActivity() {
 
         when (activityStatus) {
             "recognize" -> {
-                innerTitle.text = "인식 기능"
-                innerSubTitle.text = "원하시는 인식 기능을 선택해주세요."
+                innerTitle.text = getString(R.string.scan_func)
+                innerSubTitle.text = getString(R.string.select_scan_func)
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan))
             }
             "convenience" -> {
-                innerTitle.text = "편의 기능"
-                innerSubTitle.text = "원하시는 편의 기능을 선택해주세요."
+                innerTitle.text = getString(R.string.convenience_func)
+                innerSubTitle.text = getString(R.string.select_convenience_func)
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos))
             }
             "setting" -> {
-                innerTitle.text = "설정"
+                innerTitle.text = getString(R.string.setting)
                 innerSubTitle.isVisible = false
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off))
                 buttonItemsList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off))
