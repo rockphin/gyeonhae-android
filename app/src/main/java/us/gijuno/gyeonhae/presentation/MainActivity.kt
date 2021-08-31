@@ -11,6 +11,16 @@ import us.gijuno.gyeonhae.R
 class MainActivity : AppCompatActivity() {
     private val gridLayoutManager = GridLayoutManager(this, 2)
 
+    private fun innerActivitySelector(index: Int): String {
+        return when (index) {
+            0 -> "recognize"
+            1 -> "convenience"
+            2 -> "setting"
+            3 -> "guide"
+            else -> ""
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,9 +42,10 @@ class MainActivity : AppCompatActivity() {
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .onItemClick { _, index ->
-                startActivity(Intent(this, InnerActivity::class.java).putExtra("index", InnerActivitySelector(index)))
+                startActivity(Intent(this, InnerActivity::class.java).putExtra("index", innerActivitySelector(index)))
             }
             .setItems(buttonItemsList)
             .into(findViewById(R.id.main_button_recyclerview))
     }
 }
+
