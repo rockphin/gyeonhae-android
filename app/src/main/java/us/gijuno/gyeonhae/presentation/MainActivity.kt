@@ -48,4 +48,3 @@ class MainActivity : AppCompatActivity() {
             .into(findViewById(R.id.main_button_recyclerview))
     }
 }
-
