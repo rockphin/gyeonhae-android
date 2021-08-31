@@ -14,7 +14,7 @@ class InnerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inner)
-        val activityStatus = intent.getStringExtra("index").toString()
+        val activityStatus = intent.getStringExtra("index")?: return
 
         val buttonItemList = mutableListOf<LayoutMenuButton>()
         val innerTitle = findViewById<TextView>(R.id.inner_title)
