@@ -16,31 +16,31 @@ class InnerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_inner)
         val activityStatus = intent.getStringExtra("index").toString()
 
-        val buttonItemsList = mutableListOf<LayoutMenuButton>()
+        val buttonItemList = mutableListOf<LayoutMenuButton>()
         val innerTitle = findViewById<TextView>(R.id.inner_title)
-        val innerSubTitle = findViewById<TextView>(R.id.inner_subtitle)
+        val innerSubtitle = findViewById<TextView>(R.id.inner_subtitle)
 
         when (activityStatus) {
             "recognize" -> {
                 innerTitle.text = getString(R.string.scan_func)
-                innerSubTitle.text = getString(R.string.select_scan_func)
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan))
+                innerSubtitle.text = getString(R.string.select_scan_func)
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan))
             }
             "convenience" -> {
                 innerTitle.text = getString(R.string.convenience_func)
-                innerSubTitle.text = getString(R.string.select_convenience_func)
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos))
+                innerSubtitle.text = getString(R.string.select_convenience_func)
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos))
             }
             "setting" -> {
                 innerTitle.text = getString(R.string.setting)
-                innerSubTitle.isVisible = false
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off))
-                buttonItemsList.add(LayoutMenuButton(R.drawable.ic_auto_scan, R.string.auto_scan_off))
+                innerSubtitle.isVisible = false
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_auto_scan, R.string.auto_scan_off))
             }
         }
 
@@ -53,7 +53,7 @@ class InnerActivity : AppCompatActivity() {
                 val compoundDrawables = item.icon
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
-            .setItems(buttonItemsList)
+            .setItems(buttonItemList)
             .into(findViewById(R.id.inner_button_recyclerview))
     }
 }
