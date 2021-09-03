@@ -2,7 +2,6 @@ package us.gijuno.gyeonhae.presentation
 
 import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import slush.Slush
