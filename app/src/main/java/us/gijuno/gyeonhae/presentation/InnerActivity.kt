@@ -7,8 +7,10 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import slush.Slush
 import us.gijuno.gyeonhae.R
+import us.gijuno.gyeonhae.databinding.ActivityInnerBinding
+import us.gijuno.gyeonhae.presentation.base.BaseActivity
 
-class InnerActivity : AppCompatActivity() {
+class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner) {
     private val gridLayoutManager = GridLayoutManager(this, 2)
 
     override fun onCreate(savedInstanceState: Bundle?) {
