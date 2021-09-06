@@ -2,7 +2,6 @@ package us.gijuno.gyeonhae.presentation
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -43,7 +42,6 @@ class MainActivity : AppCompatActivity() {
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .onItemClick { _, index ->
-                Log.d("asdf", index.toString())
                 startActivity(Intent(this, InnerActivity::class.java).putExtra("index", innerActivitySelector(index)))
             }
             .setItems(buttonItemsList)
