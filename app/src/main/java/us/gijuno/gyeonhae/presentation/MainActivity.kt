@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .onItemClick { _, index ->
-                Log.d("asdf", index.toString())
                 startActivity(Intent(this, InnerActivity::class.java).putExtra("index", innerActivitySelector(index)))
             }
             .setItems(buttonItemsList)
