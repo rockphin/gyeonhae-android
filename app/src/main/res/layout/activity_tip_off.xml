@@ -7,7 +7,7 @@
     tools:context=".presentation.TipOffActivity">
 
     <WebView
-        android:id="@+id/tip_off_webviews"
+        android:id="@+id/tip_off_webViews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
