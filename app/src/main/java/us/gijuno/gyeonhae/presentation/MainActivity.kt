@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonItemsList = listOf(
-            LayoutMenuButton(R.drawable.ic_scan, R.string.scan_func),
-            LayoutMenuButton(R.drawable.ic_convenience, R.string.convenience_func),
-            LayoutMenuButton(R.drawable.ic_setting, R.string.setting),
-            LayoutMenuButton(R.drawable.ic_guide, R.string.app_guide),
+            LayoutMenuButton(R.drawable.ic_scan, R.string.scan_func, null),
+            LayoutMenuButton(R.drawable.ic_convenience, R.string.convenience_func, null),
+            LayoutMenuButton(R.drawable.ic_setting, R.string.setting, null),
+            LayoutMenuButton(R.drawable.ic_guide, R.string.app_guide, null),
         )
 
         Slush.SingleType<LayoutMenuButton>()
