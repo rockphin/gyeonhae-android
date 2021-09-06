@@ -2,6 +2,7 @@ package us.gijuno.gyeonhae.presentation
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -26,10 +27,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonItemsList = listOf(
-            LayoutMenuButton(R.drawable.ic_scan, R.string.scan_func),
-            LayoutMenuButton(R.drawable.ic_convenience, R.string.convenience_func),
-            LayoutMenuButton(R.drawable.ic_setting, R.string.setting),
-            LayoutMenuButton(R.drawable.ic_guide, R.string.app_guide),
+            LayoutMenuButton(R.drawable.ic_scan, R.string.scan_func, null),
+            LayoutMenuButton(R.drawable.ic_convenience, R.string.convenience_func, null),
+            LayoutMenuButton(R.drawable.ic_setting, R.string.setting, null),
+            LayoutMenuButton(R.drawable.ic_guide, R.string.app_guide, null),
         )
 
         Slush.SingleType<LayoutMenuButton>()
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
             }
             .onItemClick { _, index ->
+                Log.d("asdf", index.toString())
                 startActivity(Intent(this, InnerActivity::class.java).putExtra("index", innerActivitySelector(index)))
             }
             .setItems(buttonItemsList)

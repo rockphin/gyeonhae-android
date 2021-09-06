@@ -1,6 +1,7 @@
 package us.gijuno.gyeonhae.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,23 +26,23 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
             "recognize" -> {
                 innerTitle.text = getString(R.string.scan_func)
                 innerSubtitle.text = getString(R.string.select_scan_func)
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, null))
             }
             "convenience" -> {
                 innerTitle.text = getString(R.string.convenience_func)
                 innerSubtitle.text = getString(R.string.select_convenience_func)
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos, null))
             }
             "setting" -> {
                 innerTitle.text = getString(R.string.setting)
                 innerSubtitle.isVisible = false
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_auto_scan, R.string.auto_scan_off))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_vibrate, R.string.vibrate_off, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_sound, R.string.sound_off, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_auto_scan, R.string.auto_scan_off, null))
             }
         }
 
@@ -53,6 +54,10 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
                 textViewWithDrawable.text = getString(item.text)
                 val compoundDrawables = item.icon
                 textViewWithDrawable.setCompoundDrawablesRelativeWithIntrinsicBounds(0, compoundDrawables, 0, 0)
+            }
+            .onItemClick { _, index ->
+                Log.d("asdf", index.toString())
+                startActivity(buttonItemList[index].intent)
             }
             .setItems(buttonItemList)
             .into(findViewById(R.id.inner_button_recyclerview))
