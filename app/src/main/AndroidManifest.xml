@@ -10,8 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gyeonhae">
         <activity
-            android:name=".presentation.TipOffActivity"
             android:name=".presentation.InnerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.TipOffActivity"
             android:exported="true" />
         <activity
             android:name=".presentation.MainActivity"
