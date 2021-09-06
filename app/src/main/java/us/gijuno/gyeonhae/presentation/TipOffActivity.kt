@@ -11,17 +11,17 @@ class TipOffActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tip_off)
-        val tipOffWebview = findViewById<WebView>(R.id.tip_off_webViews)
+        val tipOffWebView = findViewById<WebView>(R.id.tip_off_webViews)
 
-        tipOffWebview.webViewClient = WebViewClient()
-        tipOffWebview.webChromeClient = WebChromeClient()
+        tipOffWebView.webViewClient = WebViewClient()
+        tipOffWebView.webChromeClient = WebChromeClient()
 
-        tipOffWebview.apply {
+        tipOffWebView.apply {
             settings.useWideViewPort = true
             settings.setSupportZoom(true)
             settings.builtInZoomControls = true
         }
 
-        tipOffWebview.loadUrl("https://forms.gle/FrnvgCuRT3NzcSZJ6")
+        tipOffWebView.loadUrl("https://forms.gle/FrnvgCuRT3NzcSZJ6")
     }
 }
