@@ -4,8 +4,22 @@
     <string name="main_subtitle">반갑습니다</string>
     <string name="main_title">사용할 기능을 선택하세요</string>
     <string name="app_logo">앱 로고</string>
-    <string name="scan_func">인식기능</string>
+    <string name="scan_func">인식 기능</string>
+    <string name="select_scan_func">원하시는 인식 기능을 선택해주세요.</string>
     <string name="convenience_func">편의기능</string>
+    <string name="select_convenience_func">원하시는 편의 기능을 선택해주세요.</string>
     <string name="setting">설정</string>
     <string name="app_guide">앱 사용 가이드</string>
+    <string name="braille_scan">점자 인식</string>
+    <string name="text_scan">글자 인식</string>
+    <string name="picture_scan">장면 인식</string>
+    <string name="barcode_scan">바코드 인식</string>
+    <string name="tip_off">오류 제보</string>
+    <string name="sos">도움 요청</string>
+    <string name="vibrate_on">진동 켜기</string>
+    <string name="vibrate_off">진동 끄기</string>
+    <string name="sound_on">소리 켜기</string>
+    <string name="sound_off">소리 끄기</string>
+    <string name="auto_scan_on">자동인식 켜기</string>
+    <string name="auto_scan_off">자동인식 끄기</string>
 </resources>
