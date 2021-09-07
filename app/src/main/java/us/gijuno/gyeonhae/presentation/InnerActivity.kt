@@ -1,5 +1,7 @@
 package us.gijuno.gyeonhae.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
 import androidx.core.view.isVisible
@@ -8,8 +10,6 @@ import slush.Slush
 import us.gijuno.gyeonhae.R
 import us.gijuno.gyeonhae.databinding.ActivityInnerBinding
 import us.gijuno.gyeonhae.presentation.base.BaseActivity
-import android.content.Intent
-import android.net.Uri
 
 class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner) {
     private val gridLayoutManager = GridLayoutManager(this, 2)
