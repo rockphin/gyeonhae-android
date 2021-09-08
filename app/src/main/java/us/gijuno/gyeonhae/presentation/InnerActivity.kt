@@ -30,7 +30,7 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, null))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, Intent(this, BarcodeActivity::class.java)))
             }
             "convenience" -> {
                 innerTitle.text = getString(R.string.convenience_func)
