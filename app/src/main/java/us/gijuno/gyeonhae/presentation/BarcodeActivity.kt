@@ -30,7 +30,6 @@ import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-
 typealias BarcodeListener = (result: String) -> Unit
 
 class BarcodeActivity : AppCompatActivity() {
@@ -90,7 +89,9 @@ class BarcodeActivity : AppCompatActivity() {
         // Set up image capture listener, which is triggered after photo has
         // been taken
         imageCapture.takePicture(
-            outputOptions, ContextCompat.getMainExecutor(this), object : ImageCapture.OnImageSavedCallback {
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            object : ImageCapture.OnImageSavedCallback {
                 override fun onError(exc: ImageCaptureException) {
                     Log.e(TAG, "Photo capture failed: ${exc.message}", exc)
                 }
@@ -102,7 +103,6 @@ class BarcodeActivity : AppCompatActivity() {
                     Log.d(TAG, msg)
                 }
             })
-
     }
 
     private fun startCamera() {
@@ -115,7 +115,6 @@ class BarcodeActivity : AppCompatActivity() {
             imageCapture = ImageCapture.Builder()
                 .build()
 
-
             // Select back camera as a default
             val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
@@ -126,7 +125,6 @@ class BarcodeActivity : AppCompatActivity() {
                 // Bind use cases to camera
                 cameraProvider.bindToLifecycle(
                     this, cameraSelector, preview, imageCapture, imageAnalyzer)
-
             } catch (exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }
