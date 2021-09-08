@@ -1,5 +1,7 @@
 package us.gijuno.gyeonhae.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
 import androidx.core.view.isVisible
@@ -28,12 +30,12 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, null))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, Intent(this, BarcodeActivity::class.java)))
             }
             "convenience" -> {
                 innerTitle.text = getString(R.string.convenience_func)
                 innerSubtitle.text = getString(R.string.select_convenience_func)
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_tip_off, R.string.tip_off, Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/FrnvgCuRT3NzcSZJ6"))))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_sos, R.string.sos, null))
             }
             "setting" -> {
