@@ -16,7 +16,7 @@ class GyeonHaeApplication : Application() {
             return _vibrator!!
         }
 
-    fun oneTimeVibrate(time: Long, amplitude: Int) {
+    fun vibrateOnce(time: Long, amplitude: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             vibrator.vibrate(VibrationEffect.createOneShot(time, amplitude))
         } else {
@@ -24,7 +24,7 @@ class GyeonHaeApplication : Application() {
         }
     }
 
-    fun repeatVibrate(pattern: LongArray) {
+    fun vibrateRepeat(pattern: LongArray) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
         } else {
