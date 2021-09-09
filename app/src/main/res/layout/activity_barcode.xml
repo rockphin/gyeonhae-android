@@ -17,7 +17,7 @@
         android:textSize="16sp"
         android:fontFamily="@font/noto_sans_kr_bold"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="장면 인식"
+        android:text="바코드 인식"
         android:paddingBottom="20dp"
         android:paddingTop="20dp"
         android:textColor="@color/text_black"
