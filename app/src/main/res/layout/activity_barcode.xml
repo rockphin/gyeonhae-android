@@ -7,7 +7,7 @@
     tools:context=".presentation.BarcodeActivity">
 
     <androidx.camera.view.PreviewView
-        android:id="@+id/viewFinder"
+        android:id="@+id/barcodeViewFinder"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
