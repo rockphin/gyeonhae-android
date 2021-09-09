@@ -55,6 +55,7 @@ class BarcodeActivity : AppCompatActivity() {
             .also {
                 it.setAnalyzer(cameraExecutor, BarcodeAnalyzer(MultiFormatReader()) { result ->
                     Log.d(TAG, "Result: $result")
+                    (application as GyeonHaeApplication).scanSuccess()
                     stopCamera()
                 })
             }
@@ -108,6 +109,8 @@ class BarcodeActivity : AppCompatActivity() {
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        (application as GyeonHaeApplication).scanStart()
 
         cameraProviderFuture.addListener({
             // Used to bind the lifecycle of cameras to the lifecycle owner
