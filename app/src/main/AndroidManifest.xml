@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gyeonhae">
         <activity
+            android:name=".presentation.TextActivity"
+            android:exported="true" />
+      <activity
             android:name=".presentation.ImageActivity"
             android:exported="true" />
         <activity
