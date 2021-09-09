@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
@@ -23,6 +24,8 @@ import com.google.zxing.NotFoundException
 import com.google.zxing.PlanarYUVLuminanceSource
 import com.google.zxing.common.HybridBinarizer
 import us.gijuno.gyeonhae.R
+import us.gijuno.gyeonhae.data.Repository
+import us.gijuno.gyeonhae.data.ServiceRequester
 import java.io.File
 import java.nio.ByteBuffer
 import java.text.SimpleDateFormat
@@ -55,6 +58,8 @@ class BarcodeActivity : AppCompatActivity() {
             .also {
                 it.setAnalyzer(cameraExecutor, BarcodeAnalyzer(MultiFormatReader()) { result ->
                     Log.d(TAG, "Result: $result")
+                    findViewById<TextView>(R.id.barcode_result).text = Repository().barcodeResult
+                    Log.d(TAG, "Response: ${Repository().barcodeResult}")
                     stopCamera()
                 })
             }
