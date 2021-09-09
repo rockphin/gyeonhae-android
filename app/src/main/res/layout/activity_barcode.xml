@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"/>
     
     <TextView
+        android:id="@+id/barcode_result"
         android:paddingBottom="40dp"
         android:paddingTop="40dp"
         android:textColor="@color/white"
