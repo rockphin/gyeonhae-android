@@ -29,7 +29,7 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
                 innerSubtitle.text = getString(R.string.select_scan_func)
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, null))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, Intent(this, ImageActivity::class.java)))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, Intent(this, BarcodeActivity::class.java)))
             }
             "convenience" -> {
