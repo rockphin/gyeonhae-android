@@ -28,7 +28,7 @@ class InnerActivity : BaseActivity<ActivityInnerBinding>(R.layout.activity_inner
                 innerTitle.text = getString(R.string.scan_func)
                 innerSubtitle.text = getString(R.string.select_scan_func)
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_braille, R.string.braille_scan, null))
-                buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, null))
+                buttonItemList.add(LayoutMenuButton(R.drawable.ic_text, R.string.text_scan, Intent(this, TextActivity::class.java)))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_picture, R.string.picture_scan, null))
                 buttonItemList.add(LayoutMenuButton(R.drawable.ic_barcode, R.string.barcode_scan, Intent(this, BarcodeActivity::class.java)))
             }
