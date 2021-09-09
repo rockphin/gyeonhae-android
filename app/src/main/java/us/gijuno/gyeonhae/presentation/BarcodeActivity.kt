@@ -18,11 +18,14 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.zxing.BinaryBitmap
 import com.google.zxing.MultiFormatReader
 import com.google.zxing.NotFoundException
 import com.google.zxing.PlanarYUVLuminanceSource
 import com.google.zxing.common.HybridBinarizer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import us.gijuno.gyeonhae.R
 import us.gijuno.gyeonhae.data.Repository
 import us.gijuno.gyeonhae.data.ServiceRequester
@@ -57,6 +60,11 @@ class BarcodeActivity : AppCompatActivity() {
             .build()
             .also {
                 it.setAnalyzer(cameraExecutor, BarcodeAnalyzer(MultiFormatReader()) { result ->
+                    Repository().barcodeResult.also {
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            Repository().getBarcode(result)
+                        }
+                    }
                     Log.d(TAG, "Result: $result")
                     findViewById<TextView>(R.id.barcode_result).text = Repository().barcodeResult
                     Log.d(TAG, "Response: ${Repository().barcodeResult}")

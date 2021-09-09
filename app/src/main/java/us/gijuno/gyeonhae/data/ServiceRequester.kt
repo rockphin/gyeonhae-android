@@ -14,7 +14,7 @@ object ServiceRequester {
 
     private val service = retrofit.create(Service::class.java)
 
-    fun getBarcode(code: String): String {
+    fun getBarcode(code: String): List<Barcode> {
         return service.getBarcode(code).execute().body() ?: throw IllegalArgumentException()
     }
 }
